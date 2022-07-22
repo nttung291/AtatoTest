@@ -1,0 +1,126 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "**/*"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "unused-imports"
+  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+      },
+      "rules": {
+        "no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          {
+            "vars": "all",
+            "varsIgnorePattern": "^_",
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-this-alias": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "quotes": [
+          2,
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ],
+        "indent": [
+          "error",
+          2,
+          {
+            "SwitchCase": 1
+          }
+        ],
+        "no-console": 1,
+        "no-multiple-empty-lines": 1,
+        "space-before-function-paren": 0,
+        "complexity": [
+          "error",
+          10
+        ],
+        "no-nested-ternary": "error",
+        "brace-style": 1,
+        "curly": [
+          "error",
+          "all"
+        ],
+        "spaced-comment": 0,
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "key-spacing": [
+          2,
+          {
+            "beforeColon": false,
+            "afterColon": true
+          }
+        ],
+        "max-depth": [
+          "error",
+          3
+        ],
+        "semi": "error",
+        "keyword-spacing": [
+          "error",
+          {
+            "before": true
+          }
+        ],
+        "arrow-spacing": [
+          "error",
+          {
+            "before": true,
+            "after": true
+          }
+        ],
+        "arrow-parens": [
+          "error",
+          "always"
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+      },
+      "rules": {}
+    }
+  ]
+}

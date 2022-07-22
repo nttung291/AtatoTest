@@ -1,0 +1,2 @@
+export const SET_SIGNATURE = 'SET_SIGNATURE';
+
